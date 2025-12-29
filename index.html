@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Samuel Amorim - Data Intelligence</title>
+    <meta name="title" content="Samuel Amorim - Data Intelligence">
+    <meta name="description" content="Portfólio de Data Science, Engenharia de Dados e Analytics. Transformando dados brutos em inteligência estratégica.">
+    <meta name="keywords" content="Data Science, Data Engineering, Python, SQL, Power BI, Machine Learning, Azure, Databricks">
+    <meta name="author" content="Samuel Amorim">
+    <meta name="theme-color" content="#2E6DB4">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://samamorim.github.io/">
+    <meta property="og:title" content="Samuel Amorim - Data Intelligence">
+    <meta property="og:description" content="Especialista em Dados focado em Analytics, Engenharia e Data Science aplicada. Veja meus projetos e stack tecnológico.">
+    <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D4D03AQFShUiExc_lgA/profile-displayphoto-scale_400_400/B4DZoTTcF4G8Ag-/0/1761260456153?e=1768435200&v=beta&t=kTSr5nyvDfTqm7ogk-CyHcaBQSztg7S6zHjgQ0bgji8">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://samamorim.github.io/">
+    <meta property="twitter:title" content="Samuel Amorim - Data Intelligence">
+    <meta property="twitter:description" content="Especialista em Dados focado em Analytics, Engenharia e Data Science aplicada.">
+    <meta property="twitter:image" content="https://media.licdn.com/dms/image/v2/D4D03AQFShUiExc_lgA/profile-displayphoto-scale_400_400/B4DZoTTcF4G8Ag-/0/1761260456153?e=1768435200&v=beta&t=kTSr5nyvDfTqm7ogk-CyHcaBQSztg7S6zHjgQ0bgji8">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              // Primary defaults to the Blue provided
+              primary: {
+                50: '#f0f7ff',
+                100: '#e0effe',
+                200: '#badfff',
+                300: '#7cc2ff',
+                400: '#38a0ff',
+                500: '#2E6DB4', // Azul Celta Base
+                600: '#1d5696',
+                700: '#17457a',
+                800: '#163b65',
+                900: '#163253',
+                950: '#0f2036',
+              },
+              // THE REQUESTED EXACT PALETTE
+              ps: {
+                red: '#DF0024',    // Vermelho Cádmio
+                yellow: '#F3C300', // Papoula Dourada
+                green: '#00AC9F',  // Verde Persa
+                blue: '#2E6DB4',   // Azul Celta
+              },
+              brand: {
+                50: '#fafafa',
+                100: '#f4f4f5',
+                200: '#e4e4e7',
+                300: '#d4d4d8',
+                400: '#a1a1aa',
+                500: '#71717a', 
+                600: '#52525b',
+                700: '#3f3f46',
+                800: '#27272a',
+                900: '#18181b', 
+                950: '#09090b', 
+              },
+              darkbg: '#050505', // Deep Black
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              mono: ['JetBrains Mono', 'monospace'], // Fonte de dados/código
+            },
+            animation: {
+              'float': 'float 6s ease-in-out infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'spin-slow': 'spin 12s linear infinite',
+              'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'shine': 'shine 1s ease-in-out',
+              'shimmer': 'shimmer 2s linear infinite',
+            },
+            keyframes: {
+              float: {
+                '0%, 100%': { transform: 'translateY(0)' },
+                '50%': { transform: 'translateY(-20px)' },
+              },
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              shine: {
+                '0%': { left: '-100%', opacity: '0' },
+                '50%': { opacity: '0.5' },
+                '100%': { left: '200%', opacity: '0' },
+              },
+              shimmer: {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(100%)' },
+              }
+            }
+          },
+        },
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        font-family: 'Inter', sans-serif;
+        cursor: default;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
+      /* Selection Color Polish - Using PS Blue */
+      ::selection {
+        background-color: rgba(46, 109, 180, 0.3); 
+        color: inherit;
+      }
+      
+      /* Scrollbar minimalista e elegante */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #d4d4d8; /* Zinc 300 */
+        border-radius: 99px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #27272a; /* Zinc 800 */
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #a1a1aa; /* Zinc 400 */
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #3f3f46; /* Zinc 700 */
+      }
+
+      /* Utilitários Glass - Refined */
+      .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .dark .glass {
+        background: rgba(9, 9, 11, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+      
+      .glass-card {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+      .dark .glass-card {
+        background: rgba(20, 20, 23, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+      
+      .glass-nav {
+         background: rgba(255, 255, 255, 0.8);
+         backdrop-filter: blur(20px);
+         -webkit-backdrop-filter: blur(20px);
+      }
+      
+      .dark .glass-nav {
+         background: rgba(5, 5, 5, 0.8);
+      }
+
+      /* Sidebar Glass Style */
+      .glass-sidebar {
+         background: rgba(255, 255, 255, 0.85);
+         backdrop-filter: blur(20px);
+      }
+      
+      .dark .glass-sidebar {
+         background: rgba(5, 5, 5, 0.85);
+      }
+
+      /* Texture Noise Class */
+      .bg-noise {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+      }
+
+      /* Glow Effects */
+      .glow-text {
+        text-shadow: 0 0 20px rgba(46, 109, 180, 0.6); /* Blue Glow */
+      }
+
+      /* ANIMATION: EARTHQUAKE (TREMOR VIOLENTO) */
+      @keyframes earthquake {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+      }
+
+      .earthquake-mode {
+        animation: earthquake 0.5s linear infinite;
+        overflow-x: hidden; /* Evita scrollbar lateral durante o tremor */
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.23.26",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-zinc-50 text-zinc-900 dark:bg-[#000000] dark:text-zinc-100 transition-colors duration-500 overflow-x-hidden selection:bg-ps-blue selection:text-white">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
