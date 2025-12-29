@@ -3,7 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
     <title>Samuel Amorim - Data Intelligence</title>
+    <meta name="title" content="Samuel Amorim - Data Intelligence">
+    <meta name="description" content="Portfólio de Data Science, Engenharia de Dados e Analytics. Transformando dados brutos em inteligência estratégica.">
+    <meta name="keywords" content="Data Science, Data Engineering, Python, SQL, Power BI, Machine Learning, Azure, Databricks">
+    <meta name="author" content="Samuel Amorim">
+    <meta name="theme-color" content="#2E6DB4">
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://samamorim.github.io/">
+    <meta property="og:title" content="Samuel Amorim - Data Intelligence">
+    <meta property="og:description" content="Especialista em Dados focado em Analytics, Engenharia e Data Science aplicada. Veja meus projetos e stack tecnológico.">
+    <meta property="og:image" content="https://media.licdn.com/dms/image/v2/D4D03AQFShUiExc_lgA/profile-displayphoto-scale_400_400/B4DZoTTcF4G8Ag-/0/1761260456153?e=1768435200&v=beta&t=kTSr5nyvDfTqm7ogk-CyHcaBQSztg7S6zHjgQ0bgji8">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://samamorim.github.io/">
+    <meta property="twitter:title" content="Samuel Amorim - Data Intelligence">
+    <meta property="twitter:description" content="Especialista em Dados focado em Analytics, Engenharia e Data Science aplicada.">
+    <meta property="twitter:image" content="https://media.licdn.com/dms/image/v2/D4D03AQFShUiExc_lgA/profile-displayphoto-scale_400_400/B4DZoTTcF4G8Ag-/0/1761260456153?e=1768435200&v=beta&t=kTSr5nyvDfTqm7ogk-CyHcaBQSztg7S6zHjgQ0bgji8">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -11,18 +33,26 @@
         theme: {
           extend: {
             colors: {
+              // Primary defaults to the Blue provided
               primary: {
-                50: '#eef2ff',
-                100: '#e0e7ff',
-                200: '#c7d2fe',
-                300: '#a5b4fc',
-                400: '#818cf8',
-                500: '#6366f1', // Indigo Vibrant
-                600: '#4f46e5',
-                700: '#4338ca',
-                800: '#3730a3',
-                900: '#312e81',
-                950: '#1e1b4b',
+                50: '#f0f7ff',
+                100: '#e0effe',
+                200: '#badfff',
+                300: '#7cc2ff',
+                400: '#38a0ff',
+                500: '#2E6DB4', // Azul Celta Base
+                600: '#1d5696',
+                700: '#17457a',
+                800: '#163b65',
+                900: '#163253',
+                950: '#0f2036',
+              },
+              // THE REQUESTED EXACT PALETTE
+              ps: {
+                red: '#DF0024',    // Vermelho Cádmio
+                yellow: '#F3C300', // Papoula Dourada
+                green: '#00AC9F',  // Verde Persa
+                blue: '#2E6DB4',   // Azul Celta
               },
               brand: {
                 50: '#fafafa',
@@ -48,6 +78,8 @@
               'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
               'spin-slow': 'spin 12s linear infinite',
               'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+              'shine': 'shine 1s ease-in-out',
+              'shimmer': 'shimmer 2s linear infinite',
             },
             keyframes: {
               float: {
@@ -57,6 +89,15 @@
               fadeInUp: {
                 '0%': { opacity: '0', transform: 'translateY(20px)' },
                 '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              shine: {
+                '0%': { left: '-100%', opacity: '0' },
+                '50%': { opacity: '0.5' },
+                '100%': { left: '200%', opacity: '0' },
+              },
+              shimmer: {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(100%)' },
               }
             }
           },
@@ -69,69 +110,95 @@
     <style>
       html {
         scroll-behavior: smooth;
-        /* Scroll padding removido para funcionar melhor com a sidebar lateral */
       }
       
       body {
         font-family: 'Inter', sans-serif;
         cursor: default;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
       }
       
-      /* Ocultar scrollbar padrão e criar uma fina/minimalista */
+      /* Selection Color Polish - Using PS Blue */
+      ::selection {
+        background-color: rgba(46, 109, 180, 0.3); 
+        color: inherit;
+      }
+      
+      /* Scrollbar minimalista e elegante */
       ::-webkit-scrollbar {
         width: 8px;
       }
       ::-webkit-scrollbar-track {
-        background: #09090b; 
+        background: transparent; 
       }
       ::-webkit-scrollbar-thumb {
-        background: #3f3f46; 
-        border-radius: 4px;
-        border: 2px solid #09090b; /* Cria um padding visual */
+        background: #d4d4d8; /* Zinc 300 */
+        border-radius: 99px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #27272a; /* Zinc 800 */
       }
       ::-webkit-scrollbar-thumb:hover {
-        background: #6366f1; 
+        background: #a1a1aa; /* Zinc 400 */
+      }
+      .dark ::-webkit-scrollbar-thumb:hover {
+        background: #3f3f46; /* Zinc 700 */
       }
 
-      /* Utilitários Glass */
+      /* Utilitários Glass - Refined */
       .glass {
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+      .dark .glass {
+        background: rgba(9, 9, 11, 0.6);
         border: 1px solid rgba(255, 255, 255, 0.05);
       }
       
       .glass-card {
-        background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+      .dark .glass-card {
+        background: rgba(20, 20, 23, 0.4);
         border: 1px solid rgba(255, 255, 255, 0.05);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
       }
       
       .glass-nav {
-         background: rgba(255, 255, 255, 0.7);
-         backdrop-filter: blur(12px);
-         -webkit-backdrop-filter: blur(12px);
+         background: rgba(255, 255, 255, 0.8);
+         backdrop-filter: blur(20px);
+         -webkit-backdrop-filter: blur(20px);
       }
       
       .dark .glass-nav {
-         background: rgba(5, 5, 5, 0.7);
+         background: rgba(5, 5, 5, 0.8);
       }
 
       /* Sidebar Glass Style */
       .glass-sidebar {
-         background: rgba(255, 255, 255, 0.8);
+         background: rgba(255, 255, 255, 0.85);
          backdrop-filter: blur(20px);
       }
       
       .dark .glass-sidebar {
-         background: rgba(5, 5, 5, 0.8);
+         background: rgba(5, 5, 5, 0.85);
+      }
+
+      /* Texture Noise Class */
+      .bg-noise {
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
       }
 
       /* Glow Effects */
       .glow-text {
-        text-shadow: 0 0 20px rgba(99, 102, 241, 0.5);
+        text-shadow: 0 0 20px rgba(46, 109, 180, 0.6); /* Blue Glow */
       }
 
       /* ANIMATION: EARTHQUAKE (TREMOR VIOLENTO) */
@@ -168,9 +235,9 @@
   }
 }
 </script>
-  <script type="module" crossorigin src="/portifolio/assets/index-B7jP_uXG.js"></script>
+  <script type="module" crossorigin src="/portifolio/assets/index-BwH5qyZ9.js"></script>
 </head>
-  <body class="bg-zinc-50 text-zinc-900 dark:bg-[#050505] dark:text-zinc-100 transition-colors duration-500 overflow-x-hidden selection:bg-primary-500 selection:text-white">
+  <body class="bg-zinc-50 text-zinc-900 dark:bg-[#000000] dark:text-zinc-100 transition-colors duration-500 overflow-x-hidden selection:bg-ps-blue selection:text-white">
     <div id="root"></div>
 </body>
 </html>
