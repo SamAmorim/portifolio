@@ -436,8 +436,8 @@ export const projectsData = {
         { label: 'Adoption', value: 'Open Source' }
       ],
       tags: ['Power BI', 'DAX', 'HTML/CSS', 'Open Source', 'UI/UX'],
-      repoUrl: 'https://github.com/SamAmorim/pbi-ui-kit',
-      liveUrl: 'https://samamorim.github.io/pbi-ui-kit/', // URL da demo adicionada
+      repoUrl: 'https://github.com/SamAmorim/Kpi-Card-Builder',
+      liveUrl: 'https://samamorim.github.io/Kpi-Card-Builder/', // URL da demo adicionada
       // Botão docsUrl removido para este projeto
     }
   ] as Project[],
@@ -508,7 +508,7 @@ export const projectsData = {
       ],
       tags: ['Power BI', 'DAX', 'HTML/CSS', 'Open Source', 'UI/UX'],
       repoUrl: 'https://github.com/SamAmorim/pbi-ui-kit',
-      liveUrl: 'https://samamorim.github.io/pbi-ui-kit/', // Demo link added
+      liveUrl: 'https://samamorim.github.io/Kpi-Card-Builder/', // Demo link added
       // Buttons removed
     }
   ] as Project[]
