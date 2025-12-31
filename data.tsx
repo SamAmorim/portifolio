@@ -421,8 +421,8 @@ export const projectsData = {
     },
     {
       id: 3,
-      title: 'PBI Kpi Builder',
-      subtitle: 'Automação de UI para Power BI',
+      title: 'Kpi Card Builder',
+      subtitle: 'Automação de UI para Data Viz',
       category: 'Open Source Tool',
       status: 'Maintenance',
       date: 'Desde Dez 2025',
@@ -492,8 +492,8 @@ export const projectsData = {
     },
     {
       id: 3,
-      title: 'PBI Kpi Builder',
-      subtitle: 'UI Automation for Power BI',
+      title: 'Kpi Card Builder',
+      subtitle: 'UI Automation for Data Viz',
       category: 'Open Source Tool',
       status: 'Maintenance',
       date: 'Since Dec 2025',
@@ -507,7 +507,7 @@ export const projectsData = {
         { label: 'Adoption', value: 'Open Source' }
       ],
       tags: ['Power BI', 'DAX', 'HTML/CSS', 'Open Source', 'UI/UX'],
-      repoUrl: 'https://github.com/SamAmorim/pbi-ui-kit',
+      repoUrl: 'https://github.com/SamAmorim/Kpi-Card-Builder',
       liveUrl: 'https://samamorim.github.io/Kpi-Card-Builder/', // Demo link added
       // Buttons removed
     }
